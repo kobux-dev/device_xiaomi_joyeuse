@@ -106,7 +106,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 420
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 
 # Graphics
@@ -192,7 +192,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CONFIG := cust_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6250
+TARGET_KERNEL_SOURCE := kernel/xiaomi/joyeuse
 KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 KERNEL_SUPPORTS_LLVM_TOOLS := true
@@ -369,3 +369,6 @@ TARGET_OTA_ASSERT_DEVICE := joyeuse
 
 # Inherit the proprietary files
 -include vendor/xiaomi/joyeuse/BoardConfigVendor.mk
+
+# Platform
+PRODUCT_BOARD_PLATFORM := atoll
